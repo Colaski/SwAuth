@@ -1,0 +1,584 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3506F937274F48F4007A2C96 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3506F936274F48F4007A2C96 /* Provider.swift */; };
+		3506F939274F4911007A2C96 /* GoogleTVDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3506F938274F4911007A2C96 /* GoogleTVDevice.swift */; };
+		3506F93B274F491E007A2C96 /* Spotify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3506F93A274F491E007A2C96 /* Spotify.swift */; };
+		353CD5DD26B68C3300D45ADA /* SwAuthTVApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353CD5DC26B68C3300D45ADA /* SwAuthTVApp.swift */; };
+		353CD5DF26B68C3300D45ADA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353CD5DE26B68C3300D45ADA /* ContentView.swift */; };
+		353CD5E126B68C3400D45ADA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 353CD5E026B68C3400D45ADA /* Assets.xcassets */; };
+		353CD5E426B68C3400D45ADA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 353CD5E326B68C3400D45ADA /* Preview Assets.xcassets */; };
+		3542CC0126ACB663000DCB4C /* ProviderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3542CC0026ACB663000DCB4C /* ProviderView.swift */; };
+		355C8D0A26B7D1180067EE77 /* SwAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 355C8D0926B7D1180067EE77 /* SwAuth */; };
+		355C8D0C26B7D11F0067EE77 /* SwAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 355C8D0B26B7D11F0067EE77 /* SwAuth */; };
+		35763FD626A402C100310F6D /* SwAuthTestAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35763FD526A402C100310F6D /* SwAuthTestAppApp.swift */; };
+		35763FDA26A402C100310F6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35763FD926A402C100310F6D /* Assets.xcassets */; };
+		35763FDD26A402C100310F6D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35763FDC26A402C100310F6D /* Preview Assets.xcassets */; };
+		35B5EDB526ABC81E00A04A08 /* ProvidersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B5EDB426ABC81E00A04A08 /* ProvidersView.swift */; };
+		35B5EDBD26ABD7BB00A04A08 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B5EDBC26ABD7BB00A04A08 /* Provider.swift */; };
+		35F2231B26A611EA005462F0 /* BetterSafariView in Frameworks */ = {isa = PBXBuildFile; productRef = 35F2231A26A611EA005462F0 /* BetterSafariView */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3506F936274F48F4007A2C96 /* Provider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Provider.swift; path = "../../../../../.Trash/SwAuthTV 20-22-26-519/SwAuthTV/Provider.swift"; sourceTree = "<group>"; };
+		3506F938274F4911007A2C96 /* GoogleTVDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleTVDevice.swift; sourceTree = "<group>"; };
+		3506F93A274F491E007A2C96 /* Spotify.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spotify.swift; sourceTree = "<group>"; };
+		3522C1F826A4A08A00DCAA79 /* SwAuthTestApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwAuthTestApp.entitlements; sourceTree = "<group>"; };
+		3522C1FE26A4A30300DCAA79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		353CD5DA26B68C3300D45ADA /* SwAuthTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwAuthTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		353CD5DC26B68C3300D45ADA /* SwAuthTVApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwAuthTVApp.swift; sourceTree = "<group>"; };
+		353CD5DE26B68C3300D45ADA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		353CD5E026B68C3400D45ADA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		353CD5E326B68C3400D45ADA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3542CC0026ACB663000DCB4C /* ProviderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderView.swift; sourceTree = "<group>"; };
+		355C8D0826B7D1000067EE77 /* SwAuth */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SwAuth; path = ..; sourceTree = "<group>"; };
+		35763FD226A402C100310F6D /* SwAuthTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwAuthTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		35763FD526A402C100310F6D /* SwAuthTestAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwAuthTestAppApp.swift; sourceTree = "<group>"; };
+		35763FD926A402C100310F6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		35763FDC26A402C100310F6D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		35B5EDB426ABC81E00A04A08 /* ProvidersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvidersView.swift; sourceTree = "<group>"; };
+		35B5EDBC26ABD7BB00A04A08 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		353CD5D726B68C3300D45ADA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				355C8D0C26B7D11F0067EE77 /* SwAuth in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35763FCF26A402C100310F6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				355C8D0A26B7D1180067EE77 /* SwAuth in Frameworks */,
+				35F2231B26A611EA005462F0 /* BetterSafariView in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		353CD5DB26B68C3300D45ADA /* SwAuthTV */ = {
+			isa = PBXGroup;
+			children = (
+				353CD5DC26B68C3300D45ADA /* SwAuthTVApp.swift */,
+				3506F936274F48F4007A2C96 /* Provider.swift */,
+				3506F938274F4911007A2C96 /* GoogleTVDevice.swift */,
+				353CD5DE26B68C3300D45ADA /* ContentView.swift */,
+				353CD5E026B68C3400D45ADA /* Assets.xcassets */,
+				353CD5E226B68C3400D45ADA /* Preview Content */,
+			);
+			path = SwAuthTV;
+			sourceTree = "<group>";
+		};
+		353CD5E226B68C3400D45ADA /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				353CD5E326B68C3400D45ADA /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		355C8D0726B7D1000067EE77 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				355C8D0826B7D1000067EE77 /* SwAuth */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		35763FC926A402C100310F6D = {
+			isa = PBXGroup;
+			children = (
+				355C8D0726B7D1000067EE77 /* Packages */,
+				35763FD426A402C100310F6D /* SwAuthTestApp */,
+				353CD5DB26B68C3300D45ADA /* SwAuthTV */,
+				35763FD326A402C100310F6D /* Products */,
+				35CFF06326B47D2400A8B594 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		35763FD326A402C100310F6D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				35763FD226A402C100310F6D /* SwAuthTestApp.app */,
+				353CD5DA26B68C3300D45ADA /* SwAuthTV.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		35763FD426A402C100310F6D /* SwAuthTestApp */ = {
+			isa = PBXGroup;
+			children = (
+				3522C1FE26A4A30300DCAA79 /* Info.plist */,
+				3522C1F826A4A08A00DCAA79 /* SwAuthTestApp.entitlements */,
+				35763FD526A402C100310F6D /* SwAuthTestAppApp.swift */,
+				35B5EDB426ABC81E00A04A08 /* ProvidersView.swift */,
+				3542CC0026ACB663000DCB4C /* ProviderView.swift */,
+				3506F93A274F491E007A2C96 /* Spotify.swift */,
+				35B5EDBC26ABD7BB00A04A08 /* Provider.swift */,
+				35763FD926A402C100310F6D /* Assets.xcassets */,
+				35763FDB26A402C100310F6D /* Preview Content */,
+			);
+			path = SwAuthTestApp;
+			sourceTree = "<group>";
+		};
+		35763FDB26A402C100310F6D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				35763FDC26A402C100310F6D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		35CFF06326B47D2400A8B594 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		353CD5D926B68C3300D45ADA /* SwAuthTV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 353CD5E726B68C3400D45ADA /* Build configuration list for PBXNativeTarget "SwAuthTV" */;
+			buildPhases = (
+				353CD5D626B68C3300D45ADA /* Sources */,
+				353CD5D726B68C3300D45ADA /* Frameworks */,
+				353CD5D826B68C3300D45ADA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwAuthTV;
+			packageProductDependencies = (
+				355C8D0B26B7D11F0067EE77 /* SwAuth */,
+			);
+			productName = SwAuthTV;
+			productReference = 353CD5DA26B68C3300D45ADA /* SwAuthTV.app */;
+			productType = "com.apple.product-type.application";
+		};
+		35763FD126A402C100310F6D /* SwAuthTestApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35763FE026A402C100310F6D /* Build configuration list for PBXNativeTarget "SwAuthTestApp" */;
+			buildPhases = (
+				35763FCE26A402C100310F6D /* Sources */,
+				35763FCF26A402C100310F6D /* Frameworks */,
+				35763FD026A402C100310F6D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwAuthTestApp;
+			packageProductDependencies = (
+				35F2231A26A611EA005462F0 /* BetterSafariView */,
+				355C8D0926B7D1180067EE77 /* SwAuth */,
+			);
+			productName = SwAuthTestApp;
+			productReference = 35763FD226A402C100310F6D /* SwAuthTestApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		35763FCA26A402C100310F6D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					353CD5D926B68C3300D45ADA = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					35763FD126A402C100310F6D = {
+						CreatedOnToolsVersion = 13.0;
+					};
+				};
+			};
+			buildConfigurationList = 35763FCD26A402C100310F6D /* Build configuration list for PBXProject "SwAuthTestApp" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 35763FC926A402C100310F6D;
+			packageReferences = (
+				35F2231926A611EA005462F0 /* XCRemoteSwiftPackageReference "BetterSafariView" */,
+			);
+			productRefGroup = 35763FD326A402C100310F6D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				35763FD126A402C100310F6D /* SwAuthTestApp */,
+				353CD5D926B68C3300D45ADA /* SwAuthTV */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		353CD5D826B68C3300D45ADA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				353CD5E426B68C3400D45ADA /* Preview Assets.xcassets in Resources */,
+				353CD5E126B68C3400D45ADA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35763FD026A402C100310F6D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35763FDD26A402C100310F6D /* Preview Assets.xcassets in Resources */,
+				35763FDA26A402C100310F6D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		353CD5D626B68C3300D45ADA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3506F937274F48F4007A2C96 /* Provider.swift in Sources */,
+				353CD5DF26B68C3300D45ADA /* ContentView.swift in Sources */,
+				3506F939274F4911007A2C96 /* GoogleTVDevice.swift in Sources */,
+				353CD5DD26B68C3300D45ADA /* SwAuthTVApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35763FCE26A402C100310F6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35763FD626A402C100310F6D /* SwAuthTestAppApp.swift in Sources */,
+				3506F93B274F491E007A2C96 /* Spotify.swift in Sources */,
+				3542CC0126ACB663000DCB4C /* ProviderView.swift in Sources */,
+				35B5EDB526ABC81E00A04A08 /* ProvidersView.swift in Sources */,
+				35B5EDBD26ABD7BB00A04A08 /* Provider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		353CD5E526B68C3400D45ADA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SwAuthTV/Preview Content\"";
+				DEVELOPMENT_TEAM = 74Z2545RDA;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.colaski.SwAuthTV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 15.0;
+			};
+			name = Debug;
+		};
+		353CD5E626B68C3400D45ADA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SwAuthTV/Preview Content\"";
+				DEVELOPMENT_TEAM = 74Z2545RDA;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.colaski.SwAuthTV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 15.0;
+			};
+			name = Release;
+		};
+		35763FDE26A402C100310F6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
+			};
+			name = Debug;
+		};
+		35763FDF26A402C100310F6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		35763FE126A402C100310F6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SwAuthTestApp/SwAuthTestApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SwAuthTestApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 74Z2545RDA;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwAuthTestApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.colaski.SwAuthTestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		35763FE226A402C100310F6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SwAuthTestApp/SwAuthTestApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SwAuthTestApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 74Z2545RDA;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwAuthTestApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.colaski.SwAuthTestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		353CD5E726B68C3400D45ADA /* Build configuration list for PBXNativeTarget "SwAuthTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				353CD5E526B68C3400D45ADA /* Debug */,
+				353CD5E626B68C3400D45ADA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		35763FCD26A402C100310F6D /* Build configuration list for PBXProject "SwAuthTestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35763FDE26A402C100310F6D /* Debug */,
+				35763FDF26A402C100310F6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		35763FE026A402C100310F6D /* Build configuration list for PBXNativeTarget "SwAuthTestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35763FE126A402C100310F6D /* Debug */,
+				35763FE226A402C100310F6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		35F2231926A611EA005462F0 /* XCRemoteSwiftPackageReference "BetterSafariView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stleamist/BetterSafariView.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		355C8D0926B7D1180067EE77 /* SwAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwAuth;
+		};
+		355C8D0B26B7D11F0067EE77 /* SwAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwAuth;
+		};
+		35F2231A26A611EA005462F0 /* BetterSafariView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 35F2231926A611EA005462F0 /* XCRemoteSwiftPackageReference "BetterSafariView" */;
+			productName = BetterSafariView;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 35763FCA26A402C100310F6D /* Project object */;
+}
