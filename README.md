@@ -143,7 +143,7 @@ Make your changes, document them, fix linting errors, see if it works, and submi
 
 Nice to have list:
 
-- [ ] Cocoapods and carthrage integration
+- [ ] Cocoapods and Carthage integration
 - [ ] Include ready to go implementations of Web API's with endpoints like in the [example app](https://github.com/Colaski/SwAuth/blob/main/SwAuthTestApp/SwAuthTestApp/Spotify.swift)
   - Perhaps Spotify, Google, Azure/Microsoft, Github etc.
 - [ ] OAuth 1.0 support
