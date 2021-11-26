@@ -1,6 +1,5 @@
 .DS_Store
 .build/
-.swiftpm/
 BuildFiles/
 DerivedData/
 xcuserdata/
