@@ -1,11 +1,12 @@
 # NOTICES AND INFORMATION
+
 This software incorporates material from third parties.
 
 ## SwiftyJSON.swift
 
 ### SwiftyJSON
 
-**Source:** https://github.com/SwiftyJSON/SwiftyJSON
+**Source:** <https://github.com/SwiftyJSON/SwiftyJSON>
 
 The MIT License (MIT)
 

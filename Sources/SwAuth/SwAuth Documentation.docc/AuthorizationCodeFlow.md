@@ -51,6 +51,7 @@ print(response.json())
 ### Options
 
 Additional options can be confifigured for the instance, for examample:
+
 ```swift
 authFlowInstance.additionalAuthorizationParams = ["Addiitonal Key": "Value for Additional Key"]
 ```

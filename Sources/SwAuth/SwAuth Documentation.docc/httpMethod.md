@@ -8,7 +8,7 @@ Set the HTTP method of the ``HTTPRequest``:
 httpRequestInstance.httpMethod = .POST
 ```
 
-Other possible values are as follows: 
+Other possible values are as follows:
 
 - `.GET`
 - `.PUT`

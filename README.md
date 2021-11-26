@@ -42,7 +42,7 @@ SwAuth is an OAuth 2.0 HTTP request library written in Swift for iOS 15.0+, macO
 
 ### Swift Package
 
-Use the Swift Package Manager to add SwAuth to your project! Simply add the package to dependencies in your `Package.swift`: 
+Use the Swift Package Manager to add SwAuth to your project! Simply add the package to dependencies in your `Package.swift`:
 
 ```swift
 let package = Package(
@@ -60,67 +60,68 @@ Select `File > Add Packages` and enter `https://github.com/Colaski/SwAuth.git`
 ## Basic Usage
 
 1. Import SwAuth in files you wish to use it's amazing features:
-```swift
-import SwAuth
-```
+
+    ```swift
+    import SwAuth
+    ```
 
 2. Create an instance of keychain:
 
-```swift
-let keychain = Keychain(service: "com.your.bundleID",
-                        accessGroup: "appIdentifierPrefix.com.your.bundleID").label("Your App Name")
-```
+    ```swift
+    let keychain = Keychain(service: "com.your.bundleID",
+                            accessGroup: "appIdentifierPrefix.com.your.bundleID").label("Your App Name")
+    ```
 
 3. Create an instance of the proper authorization flow for your Web API.
 
-```swift
-let keychain = Keychain(service: "com.your.bundleID",
-                        accessGroup: "appIdentifierPrefix.com.your.bundleID").label("Your App Name")
+    ```swift
+    let keychain = Keychain(service: "com.your.bundleID",
+                            accessGroup: "appIdentifierPrefix.com.your.bundleID").label("Your App Name")
 
-let spotify = PKCEAuthorizationFlow(clientID: "YourClientID",
-                                    authorizationEndpoint: URL(string: "https://accounts.spotify.com/authorize")!,
-                                    tokenEndpoint: URL(string: "https://accounts.spotify.com/api/token")!,
-                                    redirectURI: "someapp://callback",
-                                    keychain: keychain,
-                                    scopes: "user-follow-modify")
-```
+    let spotify = PKCEAuthorizationFlow(clientID: "YourClientID",
+                                        authorizationEndpoint: URL(string: "https://accounts.spotify.com/authorize")!,
+                                        tokenEndpoint: URL(string: "https://accounts.spotify.com/api/token")!,
+                                        redirectURI: "someapp://callback",
+                                        keychain: keychain,
+                                        scopes: "user-follow-modify")
+    ```
 
 4. Start an ASWebAuthenticationSession like in the [example app](https://github.com/Colaski/SwAuth/blob/main/SwAuthTestApp/SwAuthTestApp/ProviderView.swift#L94) with the instance's authorization URL:
 
-```swift
-spotify.authorizationURL
-```
+    ```swift
+    spotify.authorizationURL
+    ```
 
 5. Pass the callback URL from the ASWebAuthenticationSession into the provided handler method:
 
-```swift
-do {
-    try await spotify.authorizationResponseHandler(for: callbackURL)
-} catch {
-    print(error.localizedDescription)
-}
-```
+    ```swift
+    do {
+        try await spotify.authorizationResponseHandler(for: callbackURL)
+    } catch {
+        print(error.localizedDescription)
+    }
+    ```
 
 6. Make an authorized request:
 
-```swift
-do {
-    // https://developer.spotify.com/documentation/web-api/reference/#/operations/follow-artists-users
-    var request = HTTPRequest(endpoint: URL(sting: "https://api.spotify.com/v1/me/following")!)
-    request.httpMethod = .PUT
-    request.endpointQueryItems = ["type": "artist"]
-    request.httpBody = ["ids": ["5K4W6rqBFWDnAN6FQUkS6x"]]
-    request.bodyEncoding = .JSON
+    ```swift
+    do {
+        // https://developer.spotify.com/documentation/web-api/reference/#/operations/follow-artists-users
+        var request = HTTPRequest(endpoint: URL(sting: "https://api.spotify.com/v1/me/following")!)
+        request.httpMethod = .PUT
+        request.endpointQueryItems = ["type": "artist"]
+        request.httpBody = ["ids": ["5K4W6rqBFWDnAN6FQUkS6x"]]
+        request.bodyEncoding = .JSON
 
-    // Send an authenticated HTTP request, this one will follow the artist Kanye West on Spotify.
-    let json = try await spotify.authenticatedRequest(for: request, numberOfRetries: 2).json()
-    
-    // Prints the JSON output
-    print(json)
-} catch {
-    print(error.localizedDescription)
-}
-```
+        // Send an authenticated HTTP request, this one will follow the artist Kanye West on Spotify.
+        let json = try await spotify.authenticatedRequest(for: request, numberOfRetries: 2).json()
+        
+        // Prints the JSON output
+        print(json)
+    } catch {
+        print(error.localizedDescription)
+    }
+    ```
 
 For more information, read my beautiful documentation: [https://swauth.netlify.app/documentation/Swauth](https://swauth.netlify.app/documentation/Swauth)
 
@@ -131,18 +132,19 @@ Contributions are welcome!
 You do not need a mac to contribute, all you need is Swift and [SwiftLint](https://github.com/realm/SwiftLint) (there is a SwiftLint VSCode extension). No linting rules are added or excluded, the default will do.
 
 Clone the repo:
+
 ```bash
 git clone https://github.com/Colaski/SwAuth.git
 cd SwAuth
 ```
 
-Make your changes, fix linting errors, see if it works, and submit a PR for review!
+Make your changes, document them, fix linting errors, see if it works, and submit a PR for review!
 
 Nice to have list:
 
 - [ ] Include ready to go implementations of Web API's with endpoints like in the [example app](https://github.com/Colaski/SwAuth/blob/main/SwAuthTestApp/SwAuthTestApp/Spotify.swift)
-    - Perhaps Spotify, Google, Azure/Microsoft, Github etc.
-    
+  - Perhaps Spotify, Google, Azure/Microsoft, Github etc.
+
 - [ ] OAuth 1.0 support
 
 - [ ] Linux/Windows support
