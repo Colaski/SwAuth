@@ -117,7 +117,7 @@ open class DeviceAuthorizationFlow: Swauthable {
     /// Some APIs may use a different key for their authorization header's token type than the one
     /// provided by the token request response.
     ///
-    /// For example, ``Github`` uses "token", however their token response type is "bearer".
+    /// For example, Github uses "token", however their token response type is "bearer".
     open var authHeaderTokenType: String?
 
     /// The  ``DeviceFlowAuthResponse-swift.struct``from a call to the

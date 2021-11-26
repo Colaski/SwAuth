@@ -2,7 +2,7 @@
 
 ## Getting Started
 
-To use the PKCE Authorization Code Flow, first create an instance of Keychain and then create an instance of PKCEAuthorizationFlow by filling in the information of the WebAPI you wish to utilize. Spotify will be used as an example.
+To use the PKCE Authorization Code Flow, first create an instance of Keychain and then create an instance of PKCEAuthorizationFlow by filling in the information of the Web API you wish to utilize. Spotify will be used as an example.
 
 ```swift
 let keychain = Keychain(service: "com.your.bundleID",
@@ -21,7 +21,7 @@ I can now get the authorization URL my user will follow like so:
 let authURL = spotify.authorizationURL
 ```
 
-SwiftUI users, I recommend using [BetterSafariView](https://github.com/stleamist/BetterSafariView) for following the authorization URL.
+SwiftUI users, I recommend using [BetterSafariView's](https://github.com/stleamist/BetterSafariView) ASWebAuthentictionSession for following the authorization URL.
 
 Assuming the user authorizes your application, pass the callback URL into ``authorizationResponseHandler(for:)`` (but of course take into account proper error handling):
 

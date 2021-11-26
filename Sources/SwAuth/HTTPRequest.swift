@@ -34,8 +34,8 @@ HTTP load request.
  */
 public struct HTTPRequest {
     // MARK: - Properties
-    /// The server endpoint to which the HTTP request will be sent. Is initialized.
-    public var endpoint: URL
+    /// The server endpoint URL to which the HTTP request will be sent. Is initialized.
+    public let endpoint: URL
     /// Query items to add to the endpoint URL.
     public var endpointQueryItems: [String: String]?
 
@@ -58,14 +58,16 @@ public struct HTTPRequest {
     /// Any additional HTTP header values besides "Authentication" and "Content-Type".
     public var additionalHTTPHeaders: [String: String]?
     
-    /// Set the amount of time allowed for the request to complete before it terminates.
+    /// Set the amount of time allowed for the request to complete before it times out.
     ///
     /// By default, all requests are set to automatically timeout after 5 seconds of attempting to connect. Setting this property
     /// will void that default behavior. If the request has not been completed after the amount of time set by this property, it
     /// will terminate.
     ///
-    /// example: `.seconds(10)`
-    public var terminateAfter: TimeAmount?
+    /// Suppports nanoseconds, microseconds, milliseconds, seconds, minutes, hours.
+    ///
+    /// examples: `.seconds(10)`
+    public var timeoutAfter: TimeAmount?
 
     // MARK: - Method
     /// Returns the httpBody as Data and with the proper encoding specified by
@@ -97,7 +99,7 @@ public struct HTTPRequest {
     /// See Also:
     /// - ``init(endpoint:withBody:bodyEncoding:)``
     ///
-    /// - Parameter endpoint: The server endpoint to which the HTTP request will be sent.
+    /// - Parameter endpoint: The server endpoint URL to which the HTTP request will be sent.
     public init(endpoint: URL) {
         self.endpoint = endpoint
     }
@@ -106,7 +108,7 @@ public struct HTTPRequest {
     /// Calls ``init(endpoint:)``, and also initializes ``httpBody`` and ``bodyEncoding``.
     ///
     /// - Parameters:
-    ///    - endpoint: The server endpoint to which the HTTP request will be sent.
+    ///    - endpoint: The server endpoint URL to which the HTTP request will be sent.
     ///    - withBody: The body of the HTTP request.
     ///    - bodyEncoding: The ``RequestBodyEncoding``  type of the request body.
     public init(endpoint: URL,

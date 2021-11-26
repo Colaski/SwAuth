@@ -39,7 +39,7 @@ fileprivate let httpClient = HTTPClient(
 internal func http(request: HTTPRequest) async throws -> HTTPRequest.Response {
     let httpRequest = try Request(from: request)
     var deadline: NIODeadline? {
-        return request.terminateAfter != nil ? .now() + request.terminateAfter! : nil
+        return request.timeoutAfter != nil ? .now() + request.timeoutAfter! : nil
     }
 
     return try await withCheckedThrowingContinuation { continuation in

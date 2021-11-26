@@ -2,7 +2,7 @@
 
 ## Getting Started
 
-To use the Device Authorization Grant Flow, first create an instance of Keychain and then create an instance of DeviceAuthorizationFlow by filling in the information of the WebAPI you wish to utilize. Google's TV API will be used as an example.
+To use the Device Authorization Grant Flow, first create an instance of Keychain and then create an instance of DeviceAuthorizationFlow by filling in the information of the Web API you wish to utilize. Google's TV authentication will be used as an example.
 
 ```swift
 let keychain = Keychain(service: "com.your.bundleID",

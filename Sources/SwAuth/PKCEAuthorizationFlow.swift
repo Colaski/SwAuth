@@ -139,7 +139,7 @@ open class PKCEAuthorizationFlow: Swauthable {
     /// See ``tokenRequestParams`` for the provided parameters.
     open var additionalTokenRequestParams: [String: String]?
 
-    /// **Ignore if the web API does not provide a refresh token.**
+    /// **Ignore if the Web API does not provide a refresh token.**
     /// Any additional HTTP body parameters for the token refresh request. The key/value pairs for
     /// "refresh\_token" and "grant\_type" are handled internally when a
     /// ``Swauthable/authenticatedRequest(for:numberOfRetries:)``
@@ -149,7 +149,7 @@ open class PKCEAuthorizationFlow: Swauthable {
     /// Some servers may use a different key for their authorization header's token type than the one
     /// provided by the token request response.
     ///
-    /// For example, ``Github`` uses "token", however their token response type is "bearer".
+    /// For example, Github uses "token", however their token response type is "bearer".
     open var authHeaderTokenType: String?
 
     // MARK: - Methods

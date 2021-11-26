@@ -29,7 +29,7 @@ import enum NIOHTTP1.HTTPMethod
 /**
  The OAuth 2.0 Authorization Code Grant according to RFC 6749/6750.
  
- - Warning: The OAuth 2.0 Authorization Code Flow is not secure for client side applications, it should only be
+ - Warning: The OAuth 2.0 Authorization Code Flow is not secure for native applications, it should only be
  used when ABSOLUTELY NECESSARY. If you are connecting to your own HTTP server, please implement RFC 7636
  and utilize the ``PKCEAuthorizationFlow``. Unfortunately, if you do not have control over the server,
  this may be your only option.
@@ -129,7 +129,7 @@ open class AuthorizationCodeFlow: Swauthable {
     /// See ``tokenRequestParams`` for the provided parameters.
     open var additionalTokenRequestParams: [String: String]?
 
-    /// **Ignore if the web API does not provide a refresh token.**
+    /// **Ignore if the Web API does not provide a refresh token.**
     /// Any additional HTTP body parameters for the token refresh request. The key/value pairs for
     /// "refresh\_token" and "grant\_type" are handled internally when a
     /// ``Swauthable/authenticatedRequest(for:numberOfRetries:)``
@@ -142,7 +142,7 @@ open class AuthorizationCodeFlow: Swauthable {
     /// Some servers may use a different key for their authorization header's token type than the one
     /// provided by the token request response.
     ///
-    /// For example, ``Github`` uses "token", however their token response type is "bearer".
+    /// For example, Github uses "token", however their token response type is "bearer".
     open var authHeaderTokenType: String?
 
     /// Some servers may allow or want the client id and client secret to be parameters in a HTTP request's

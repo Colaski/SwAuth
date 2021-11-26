@@ -27,7 +27,7 @@ import AsyncHTTPClient
 @_exported import KeychainAccess
 @_exported import enum NIOHTTP1.HTTPMethod
 
-/// All of the The authorization flows (``AuthorizationCodeFlow``, ``PKCEAuthorizationFlow``,
+/// All of the authorization flows (``AuthorizationCodeFlow``, ``PKCEAuthorizationFlow``,
 ///  ``DeviceAuthorizationFlow``) conform to this protcol.
 ///
 /// Swauthable provides some default implementations.
@@ -70,7 +70,7 @@ public protocol Swauthable {
     /// Some APIs may use a different key for their authorization header's token type than the one
     /// provided by the token request response.
     ///
-    /// For example, ``Github`` uses "token", however their token response type is "bearer".
+    /// For example, Github uses "token", however their token response type is "bearer".
     var authHeaderTokenType: String? { get }
 
     // MARK: - Methods
@@ -134,7 +134,7 @@ extension Swauthable {
             }
         } while loop.0 == false
     }
-    /// **Ignore if the web API does not provide a refresh token.**
+    /// **Ignore if the Web API does not provide a refresh token.**
     /// Called by the instance's ``authenticatedRequest(for:)`` method. Checks if the instance has a
     /// refresh token. If it does, and the access token is expired, calls the `refreshToken` method.
     func checkRefreshToken(tokens: inout Tokens) async throws {
@@ -146,7 +146,7 @@ extension Swauthable {
             }
         }
     }
-    /// **Ignore if the web API does not provide a refresh token.**
+    /// **Ignore if the Web API does not provide a refresh token.**
     /// This method is called by the instance's `checkRefreshToken` method when the access token
     /// has expired.
     ///
@@ -176,15 +176,15 @@ extension Swauthable {
     }
 
     /**
-     Sends an authenticated HTTP request to a web API endpoint. Returns a ``HTTPRequest/Response``.
-     
+     Sends an authenticated HTTP request to a Web API endpoint. Returns a ``HTTPRequest/Response``.
+
      When this method is called, the keychain instance is checked for a refresh token. If the keychain instance
      does contain a refresh token, the access token is checked for being expired. The initial refresh token (if
      there is one), and the length of time until the access token exprires (if it has an expiration), are provided
      by the token request made when the ``authorizationResponseHandler(for:)`` is called. If
      the access token has expired, an HTTP request is made to the ``tokenEndpoint``,
      requesting a new access token and refresh token using the current refresh token.
-     
+
      - Note: The HTTP request may occasionally fail. It is recommend to retry at least once.
      
      - Parameter for: A ``HTTPRequest`` instance.
