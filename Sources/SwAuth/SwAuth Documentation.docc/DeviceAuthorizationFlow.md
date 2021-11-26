@@ -14,7 +14,7 @@ let googleTV = DeviceAuthorizationFlow(clientID: "YourClientID",
                                        keychain: keychain
                                        scopes: "email provider")
 googleTV.additionalTokenRequestParams = ["client_secret": "YourClientSecret"]
-googleTV.additionalRefreshTokenBodyParams = ["client_id": "YourClientID", "client_secret": "YourClientSectret"]
+googleTV.additionalRefreshTokenBodyParams = ["client_id": "YourClientID", "client_secret": "YourClientSecret"]
 ```
 
 Now send the authorization request and handle the response:
@@ -24,7 +24,7 @@ let deviceAuthReq = try await googleTV.deviceFlowAuthorizationRequest()
 try await googleTV.authorizationResponseHandler(for: deviceAuthReq)
 ```
 
-Obviously, you will need to diplay the authorization code and URL to the user. See ``DeviceAuthResponse`` for more information.
+Obviously, you will need to display the authorization code and URL to the user. See ``DeviceAuthResponse`` for more information.
 
 Assuming no errors were thrown, you can now successfully make an authorized HTTP request to the endpoint of your choice and print the resulting JSON:
 

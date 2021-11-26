@@ -10,7 +10,7 @@ Thus, if you are using SwAuth to send authorized requests to your server please 
 
 ## PKCEAuthorizationFlow
 
-Much like the AuthorizationCodeFlow, the ``PKCEAuthorizationFlow`` is used for devices that are not input-constrained (like iOS, iPadOS, and macOS). Unlike the AuthorizationCodeFlow, the PKCE Authorization Code Flow is safe for use in native applications (the spec was created for such purpose). No need to provide the client secret, with PKCE (Proof Key for Code Exchange) an attacker in possesion of an intercepted Authorization Code can't exchange it for a token unless they have the on-device-cryptographically-generated code verifer. 
+Much like the AuthorizationCodeFlow, the ``PKCEAuthorizationFlow`` is used for devices that are not input-constrained (like iOS, iPadOS, and macOS). Unlike the AuthorizationCodeFlow, the PKCE Authorization Code Flow is safe for use in native applications (the spec was created for such purpose). No need to provide the client secret, with PKCE (Proof Key for Code Exchange) an attacker in possession of an intercepted Authorization Code can't exchange it for a token unless they have the on-device-cryptographically-generated code verifier. 
 
 The downside is that the Proof Key for Code Exchange extension to the OAuth 2.0 Authorization Code Grant needs to be supported by the Web API you are trying to send requests to. If you own the server, great! implement [RFC 7636](https://datatracker.ietf.org/doc/html/rfc7636) and/or find a server-side framework or library that implements it ([again, here's one for Node.js](https://github.com/panva/node-oidc-provider)). Otherwise, ask the owner to implement it.
 

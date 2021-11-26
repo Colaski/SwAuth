@@ -64,7 +64,7 @@ public struct HTTPRequest {
     /// will void that default behavior. If the request has not been completed after the amount of time set by this property, it
     /// will terminate.
     ///
-    /// Suppports nanoseconds, microseconds, milliseconds, seconds, minutes, hours.
+    /// Supports nanoseconds, microseconds, milliseconds, seconds, minutes, hours.
     ///
     /// examples: `.seconds(10)`
     public var timeoutAfter: TimeAmount?
@@ -86,7 +86,7 @@ public struct HTTPRequest {
     public struct Response {
         /// The data from the request.
         public let data: Data
-        /// Retruns a [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) JSON instance
+        /// Returns a [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) JSON instance
         /// from the request.
         public func json() throws -> JSON {
             return try data.toSwiftyJSON()

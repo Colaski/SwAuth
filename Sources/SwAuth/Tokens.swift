@@ -39,7 +39,7 @@ struct Tokens: Codable {
     /// How long the access token is valid before it must be refreshed. Assumes time is in seconds. Defaults to
     /// 3600 (1 hour).
     let tokenExpiration: Int
-    /// True if the refresh token isn't "nulll".
+    /// True if the refresh token isn't "null".
     var isRefreshable: Bool {
         return refreshToken == "null" ? false : true
     }
@@ -80,7 +80,7 @@ struct Tokens: Codable {
         }
     }
     /**
-     Fetches an instance of Tokens that was previsouly saved to a keychain instance by the `saveTokens` method.
+     Fetches an instance of Tokens that was previously saved to a keychain instance by the `saveTokens` method.
      
      - Parameters:
         - for: A client id or other unique string. MUST be the same one used to save the tokens.

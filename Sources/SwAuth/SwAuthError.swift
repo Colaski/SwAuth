@@ -27,7 +27,7 @@ import Foundation
 /// `SwAuthError` is the error type that is thrown by methods in this library.
 ///
 /// Each error has a `localizedDescription`, which describes what the error is and why it may have
-/// occurred. You can access that error by acessing the `localizedDescription` property.
+/// occurred. You can access that error by accessing the `localizedDescription` property.
 ///
 /// For example, you can print a SwAuthError's description in a `catch` like so:
 /// ```swift
@@ -58,7 +58,7 @@ public enum SwAuthError: Error {
         case authCallbackInvalid
         /// The instance's state does not match the one provided
         /// by the server in the callback URL. An incorrect state
-        /// may be caused by atempted cross-site forgery.
+        /// may be caused by attempted cross-site forgery.
         case stateIncorrect
         /// Callback URL contains an error.
         case authorizationError(with: String)
@@ -70,7 +70,7 @@ public enum SwAuthError: Error {
         case refreshTokenInvalidType
         /// The keychain does not contain a valid refresh token.
         case noRefreshToken
-        /// The response from the authorization endpoint is invalid or non-existant.
+        /// The response from the authorization endpoint is invalid or non-existent.
         case responseInvalid
         /// The authorization request was denied.
         case denied
@@ -130,7 +130,7 @@ extension SwAuthError.AuthorizationErrorFailureReason {
         case .stateIncorrect:
             return """
                     The instance state does not match the one provided by the server in the callback URL.
-                    An incorrect state may be caused by an atempted cross-site forgery.
+                    An incorrect state may be caused by an attempted cross-site forgery.
                     """
         case let .authorizationError(with):
             return "Authorization failed with an error: \(with)"
@@ -143,7 +143,7 @@ extension SwAuthError.AuthorizationErrorFailureReason {
         case .noRefreshToken:
             return "Keychain does not contain a valid refresh token."
         case .responseInvalid:
-            return "The response from the authorization endpoint is invalid or non-existant."
+            return "The response from the authorization endpoint is invalid or non-existent."
         case .denied:
             return "The authorization request was denied."
         case .deviceCodeExpired:

@@ -28,16 +28,16 @@ import AsyncHTTPClient
 @_exported import enum NIOHTTP1.HTTPMethod
 
 /// All of the authorization flows (``AuthorizationCodeFlow``, ``PKCEAuthorizationFlow``,
-///  ``DeviceAuthorizationFlow``) conform to this protcol.
+///  ``DeviceAuthorizationFlow``) conform to this protocol.
 ///
 /// Swauthable provides some default implementations.
 @available(iOS 15.0, macOS 12.0, watchOS 8.0, tvOS 15.0, *)
 public protocol Swauthable {
     // MARK: - Properties
-    /// The client identifier issued by the server. Is initalized.
+    /// The client identifier issued by the server. Is initialized.
     var clientID: String { get }
 
-    /// Instance of KeychainAccess.  Is initalized.
+    /// Instance of KeychainAccess. Is initialized.
     var keychain: Keychain { get }
 
     /// The scopes you want your app to be authorized for, separated by spaces.
@@ -180,7 +180,7 @@ extension Swauthable {
 
      When this method is called, the keychain instance is checked for a refresh token. If the keychain instance
      does contain a refresh token, the access token is checked for being expired. The initial refresh token (if
-     there is one), and the length of time until the access token exprires (if it has an expiration), are provided
+     there is one), and the length of time until the access token expiries (if it has an expiration), are provided
      by the token request made when the ``authorizationResponseHandler(for:)`` is called. If
      the access token has expired, an HTTP request is made to the ``tokenEndpoint``,
      requesting a new access token and refresh token using the current refresh token.

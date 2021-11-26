@@ -85,7 +85,7 @@ extension DeviceAuthorizationFlow {
         public let verificationURI: String
         /**
          The server may respond with a complete verification URI in addition to a verification URI (the verification
-         URI combined with the user code). Following the complete verification URI alows the user to not have to type-in
+         URI combined with the user code). Following the complete verification URI allows the user to not have to type-in
          the user code. Is nil if one was not provided.
          
          - Important: As per RFC 8628, do not display the ``completeVerificationURI`` directly to the
@@ -155,7 +155,7 @@ extension DeviceAuthorizationFlow {
         }
 
         // MARK: - Method
-        /// Generates a CGImage QR code from a verificaion URL.
+        /// Generates a CGImage QR code from a verification URL.
         internal func verificationQRCode() -> CGImage? {
             let string = completeVerificationURI != nil ? completeVerificationURI! : verificationURI
             return EFQRCode.generate(for: string)

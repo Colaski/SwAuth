@@ -34,7 +34,7 @@ import enum NIOHTTP1.HTTPMethod
  authorization grant is designed for Internet-connected devices that either lack a browser to perform a
  user-agent-based authorization or are input constrained to the extent that requiring the user to input
  text in order to authenticate during the authorization flow is impractical." So, this authorization
- flow is particularly useful for tvOS and perhaps watchOS aswell.
+ flow is particularly useful for tvOS and perhaps watchOS as well.
  
  Conforms to the ``Swauthable`` protocol.
  
@@ -45,10 +45,10 @@ import enum NIOHTTP1.HTTPMethod
 @available(iOS 15.0, macOS 12.0, watchOS 8.0, tvOS 15.0, *)
 open class DeviceAuthorizationFlow: Swauthable {
     // MARK: - Properties
-    /// The client identifier issued by the server. Is initalized.
+    /// The client identifier issued by the server. Is initialized.
     public let clientID: String
 
-    /// Instance of KeychainAccess.  Is initalized.
+    /// Instance of KeychainAccess.  Is initialized.
     public let keychain: Keychain
 
     /// The scopes you want your app to be authorized for, separated by spaces.
@@ -56,7 +56,7 @@ open class DeviceAuthorizationFlow: Swauthable {
 
     /// The server authorization endpoint URL. Is initialized.
     public let authorizationEndpoint: URL
-    /// The body parameters for the authorizaion endpoint request. Read-only.
+    /// The body parameters for the authorization endpoint request. Read-only.
     ///
     /// Not including ``scopes`` and ``additionalAuthorizationParams``, this property is:
     /// ```swift
@@ -229,7 +229,7 @@ open class DeviceAuthorizationFlow: Swauthable {
      
      Example Code:
      ```swift
-     // the "accessGroup" parameter is only necessary if you wish to share the keychain accross
+     // the "accessGroup" parameter is only necessary if you wish to share the keychain across
      // multiple targets using a keychain sharing entitlement
      let keychain = Keychain(service: "your.app.bundleID", accessGroup: "appIdentifierPrefix.your.app.bundleID")
         .label("Your App Name")
@@ -264,11 +264,11 @@ open class DeviceAuthorizationFlow: Swauthable {
      
      This initializer calls
      ``DeviceAuthorizationFlow/init(clientID:authorizationEndpoint:tokenEndpoint:keychain:)``,
-     and initiializes the scopes property.
+     and initializes the scopes property.
      
      Example Code:
      ```swift
-     // the "accessGroup" parameter is only necessary if you wish to share the keychain accross
+     // the "accessGroup" parameter is only necessary if you wish to share the keychain across
      // multiple targets using a keychain sharing entitlement
      let keychain = Keychain(service: "your.app.bundleID", accessGroup: "appIdentifierPrefix.your.app.bundleID")
         .label("Your App Name")

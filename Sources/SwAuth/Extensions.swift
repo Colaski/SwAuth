@@ -60,7 +60,7 @@ internal extension Dictionary {
 // MARK: - Data+jsonToDict, jsonString
 internal extension Data {
     /// JSON data as an NSString
-    var jsonString: NSString? { // NSString is printed all nice while mormal String is not :(.
+    var jsonString: NSString? { // NSString is printed all nice while normal String is not :(.
         guard let object = try? JSONSerialization.jsonObject(with: self, options: []),
               let data = try? JSONSerialization.data(withJSONObject: object, options: [.prettyPrinted]),
               let string = NSString(data: data, encoding: String.Encoding.utf8.rawValue) else { return nil }
@@ -85,7 +85,7 @@ internal extension URL {
     /// Returns a URL appended with query items from a dictionary. If query items couldn't be appended,
     /// returns the original URL.
     ///
-    /// The dictionary ["q":"hello"] as the function paramter would return the URL:
+    /// The dictionary ["q":"hello"] as the function parameter would return the URL:
     ///
     ///     www.domain.com/search
     /// as

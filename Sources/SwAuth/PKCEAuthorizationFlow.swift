@@ -56,7 +56,7 @@ open class PKCEAuthorizationFlow: Swauthable {
         pkce.codeChallenge
     }
 
-    /// The client identifier issued by the server. Is initialzed.
+    /// The client identifier issued by the server. Is initialized.
     public let clientID: String
 
     /// Instance of KeychainAccess. Is initialized.
@@ -154,7 +154,7 @@ open class PKCEAuthorizationFlow: Swauthable {
 
     // MARK: - Methods
     /// Handles the callback URL from an ASWebAuthenticationSession
-    /// and sends a HTTP request to the initalized token endpoint for the tokens.
+    /// and sends a HTTP request to the initialized token endpoint for the tokens.
     ///
     /// Tokens are saved to the Keychain instance provided by the initializer. The tokens are saved using
     /// the instance's client id and the string "tokens" separated by a colon as the key. For example:
@@ -194,7 +194,7 @@ open class PKCEAuthorizationFlow: Swauthable {
     // MARK: - Structs
     // Most of the code in this struct is derivative of:
     // https://bootstragram.com/blog/oauth-pkce-swift-secure-code-verifiers-and-code-challenges/
-    /// Tthe proof keys for the Proof Key for Code Exchange (PKCE) extension to the OAuth 2.0
+    /// The proof keys for the Proof Key for Code Exchange (PKCE) extension to the OAuth 2.0
     /// Authorization Code Flow according to RFC 7636.
     internal struct PKCE {
         let codeVerifier: String
@@ -241,7 +241,7 @@ open class PKCEAuthorizationFlow: Swauthable {
      
      Example Code:
      ```swift
-     // the "accessGroup" parameter is only necessary if you wish to share the keychain accross
+     // the "accessGroup" parameter is only necessary if you wish to share the keychain across
      // multiple targets using a keychain sharing entitlement
      let keychain = Keychain(service: "your.app.bundleID", accessGroup: "appIdentifierPrefix.your.app.bundleID")
         .label("Your App Name")
@@ -282,11 +282,11 @@ open class PKCEAuthorizationFlow: Swauthable {
      
      This initializer calls
      ``PKCEAuthorizationFlow/init(clientID:authorizationEndpoint:tokenEndpoint:redirectURI:keychain:)``,
-     and initiializes the scopes property.
+     and initializes the scopes property.
      
      Example Code:
      ```swift
-     // the "accessGroup" parameter is only necessary if you wish to share the keychain accross
+     // the "accessGroup" parameter is only necessary if you wish to share the keychain across
      // multiple targets using a keychain sharing entitlement
      let keychain = Keychain(service: "your.app.bundleID", accessGroup: "appIdentifierPrefix.your.app.bundleID")
         .label("Your App Name")

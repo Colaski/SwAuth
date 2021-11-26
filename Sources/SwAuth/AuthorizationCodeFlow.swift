@@ -43,7 +43,7 @@ import enum NIOHTTP1.HTTPMethod
 @available(iOS 15.0, macOS 12.0, watchOS 8.0, tvOS 15.0, *)
 open class AuthorizationCodeFlow: Swauthable {
     // MARK: - Properties
-    /// The client identifier issued by the server. Is initialzed.
+    /// The client identifier issued by the server. Is initialized.
     public let clientID: String
     /// The client secret issued by the server. Is initialized.
     let clientSecret: String
@@ -146,13 +146,13 @@ open class AuthorizationCodeFlow: Swauthable {
     open var authHeaderTokenType: String?
 
     /// Some servers may allow or want the client id and client secret to be parameters in a HTTP request's
-    /// body instead of a Basic authorization. Set false if that is the case, otherwsie a Basic Authorization will
+    /// body instead of a Basic authorization. Set false if that is the case, otherwise a Basic Authorization will
     /// be used by default.
     open var useBasicAuthorization = true
 
     // MARK: - Methods
     /// Handles the callback URL from an ASWebAuthenticationSession
-    /// and sends a HTTP request to the initalized token endpoint for the tokens.
+    /// and sends a HTTP request to the initialized token endpoint for the tokens.
     ///
     /// Tokens are saved to the Keychain instance provided by the initializer. The tokens are saved using
     /// the instance's client id and the string "tokens" separated by a colon as the key. For example:
@@ -209,7 +209,7 @@ open class AuthorizationCodeFlow: Swauthable {
      
      Example Code:
      ```swift
-     // the "accessGroup" parameter is only necessary if you wish to share the keychain accross
+     // the "accessGroup" parameter is only necessary if you wish to share the keychain across
      // multiple targets using a keychain sharing entitlement
      let keychain = Keychain(service: "your.app.bundleID", accessGroup: "appIdentifierPrefix.your.app.bundleID")
          .label("Your App Name")
@@ -257,7 +257,7 @@ open class AuthorizationCodeFlow: Swauthable {
      
      Example Code:
      ```swift
-     // the "accessGroup" parameter is only necessary if you wish to share the keychain accross
+     // the "accessGroup" parameter is only necessary if you wish to share the keychain across
      // multiple targets using a keychain sharing entitlement
      let keychain = Keychain(service: "your.app.bundleID", accessGroup: "appIdentifierPrefix.your.app.bundleID")
          .label("Your App Name")

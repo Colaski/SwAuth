@@ -8,7 +8,7 @@ To use the PKCE Authorization Code Flow, first create an instance of Keychain an
 let keychain = Keychain(service: "com.your.bundleID",
                         accessGroup: "appIdentifierPrefix.com.your.bundleID").label("Your App Name")
 
-let spotify = AuthorizationCodeFlow(clientID: "YourClientID",
+let spotify = PKCEAuthorizationFlow(clientID: "YourClientID",
                                     authorizationEndpoint: URL(string: "https://accounts.spotify.com/authorize")!,
                                     tokenEndpoint: URL(string: "https://accounts.spotify.com/api/token")!,
                                     redirectURI: "someapp://callback",
@@ -21,7 +21,7 @@ I can now get the authorization URL my user will follow like so:
 let authURL = spotify.authorizationURL
 ```
 
-SwiftUI users, I recommend using [BetterSafariView's](https://github.com/stleamist/BetterSafariView) ASWebAuthentictionSession for following the authorization URL.
+SwiftUI users, I recommend using [BetterSafariView's](https://github.com/stleamist/BetterSafariView) ASWebAuthenticationSession for following the authorization URL.
 
 Assuming the user authorizes your application, pass the callback URL into ``authorizationResponseHandler(for:)`` (but of course take into account proper error handling):
 
@@ -49,9 +49,9 @@ print(response.json())
 
 ### Options
 
-Additional options can be confifigured for the instance, for examample:
+Additional options can be configured for the instance, for example:
 ```swift
-authFlowInstance.additionalAuthorizationParams = ["Addiitonal Key": "Value for Additional Key"]
+authFlowInstance.additionalAuthorizationParams = ["Additional Key": "Value for Additional Key"]
 ```
 
 - ``additionalAuthorizationParams``
@@ -77,4 +77,3 @@ authFlowInstance.additionalAuthorizationParams = ["Addiitonal Key": "Value for A
 - ``keychain``
 - ``redirectURI``
 - ``tokenEndpoint``
-

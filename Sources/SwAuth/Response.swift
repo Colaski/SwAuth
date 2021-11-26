@@ -26,7 +26,7 @@ import Foundation
 
 /// A response to be handled by a ``Swauthable/authorizationResponseHandler(for:)``.
 ///
-/// A repsonse is either a URL from an ASWebAuthenticationSession or a
+/// A response is either a URL from an ASWebAuthenticationSession or a
 /// ``DeviceAuthorizationFlow/DeviceAuthResponse``
 /// returned from the ``DeviceAuthorizationFlow/deviceFlowAuthorizationRequest()`` method.
 ///

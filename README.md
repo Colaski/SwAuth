@@ -1,24 +1,31 @@
+<!-- omit in toc -->
 # SwAuth
 
-SwAuth is an OAuth 2.0 HTTP request library for written in Swift iOS 15.0+, macOS 12.0+, watchOS 8.0+, and tvOS 15.0+.
+SwAuth is an OAuth 2.0 HTTP request library written in Swift iOS 15.0+, macOS 12.0+, watchOS 8.0+, and tvOS 15.0+.
+
+- [Features](#features)
+- [Requirements](#requirements)
+- [Installation/Integration](#installationintegration)
+- [Basic Usage](#basic-usage)
+- [Contributing](#contributing)
 
 ## Features
 
-- [x] Usable and beautiful syntax with async/await! Say goodbye to completion handler hell!
+- [x] Usable and beautiful syntax with async/await! Kiss completion handler hell and the closure jungle goodbye!
 - [x] Supports Authorization Code Grant (RFC 6749/6750), Proof Key for Code Exchange (PKCE) extension for Authorization Code Grant (RFC 7636), and the Device Authorization Grant (RFC 8628).
-- [x] Support for all Apple platforms.
+- [x] Support for all Apple device platforms.
 - [x] Retry errored requests.
 - [x] Automatically refreshes tokens.
-- [x] Tokens stored on Keychain, cross-site request forgery mitigation with state by default.
-- [x] Easily deal with JSON responses with built-in [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON).
+- [x] Tokens stored on Keychain and cross-site request forgery mitigation by default.
+- [x] Easily deal with JSON responses with [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) built-in.
 - [x] Easily integrate with SwiftUI.
-- [x] [Complete, Meticulous, Thorough, documentation.](https://swauth.netlify.app/documentation/Swauth)
-- [x] Errors that are actually useful... well most of the time.
+- [x] [Complete, meticulous, thorough, documentation.](https://swauth.netlify.app/documentation/Swauth)
+- [x] Errors that are probably, maybe actually useful.
 - [x] Built on [SwiftNIO](https://github.com/apple/swift-nio) with [AsyncHTTPClient](https://github.com/swift-server/async-http-client).
 - [x] QR Code for the Device Authorization Flow (tvOS/watchOS).
 - [x] Sample/Example Apps.
 
-## Requirments
+## Requirements
 
 - Xcode 13+
 - iOS 15.0+ | macOS 12.0+ | watchOS 8.0+ | tvOS 15.0+
@@ -56,7 +63,7 @@ let keychain = Keychain(service: "com.your.bundleID",
 let keychain = Keychain(service: "com.your.bundleID",
                         accessGroup: "appIdentifierPrefix.com.your.bundleID").label("Your App Name")
 
-let spotify = AuthorizationCodeFlow(clientID: "YourClientID",
+let spotify = PKCEAuthorizationFlow(clientID: "YourClientID",
                                     authorizationEndpoint: URL(string: "https://accounts.spotify.com/authorize")!,
                                     tokenEndpoint: URL(string: "https://accounts.spotify.com/api/token")!,
                                     redirectURI: "someapp://callback",
@@ -118,7 +125,7 @@ Make your changes and submit and a PR for review!
 
 Nice to have list:
 
-- [ ] Include ready to go implementations of Web API's with endpoints like in the [exmaple app](https://github.com/Colaski/SwAuth/blob/main/SwAuthTestApp/SwAuthTestApp/Spotify.swift)
+- [ ] Include ready to go implementations of Web API's with endpoints like in the [example app](https://github.com/Colaski/SwAuth/blob/main/SwAuthTestApp/SwAuthTestApp/Spotify.swift)
     - Perhaps Spotify, Google, Azure/Microsoft, Github etc.
     
-- [ ] OAuth1 support
+- [ ] OAuth 1.0 support
