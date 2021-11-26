@@ -2,6 +2,9 @@
 # SwAuth
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/b38ed7450d054e29a0381ad3c11df264)](https://app.codacy.com/gh/Colaski/SwAuth?utm_source=github.com&utm_medium=referral&utm_content=Colaski/SwAuth&utm_campaign=Badge_Grade_Settings)
+![SPM](https://img.shields.io/badge/Swift%20Package%20Manager-Compatible-brightgreen)
+![Swift](https://img.shields.io/badge/Swift-5.5-orange)
+![Platforms](https://img.shields.io/badge/Platforms-iOS%2015.0%2B%20%7C%20macOS%2012.0%2B%20%7C%20watchOS%208.0%2B%20%7C%20tvOS%2015.0%2B-blue)
 
 SwAuth is an OAuth 2.0 HTTP request library written in Swift iOS 15.0+, macOS 12.0+, watchOS 8.0+, and tvOS 15.0+.
 
