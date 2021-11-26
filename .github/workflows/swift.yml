@@ -10,8 +10,10 @@ jobs:
   build:
 
     runs-on: macos-latest
-
+    
     steps:
     - uses: actions/checkout@v2
+      with:
+        swift-version: "5.5"
     - name: Build
       run: swift build -v
