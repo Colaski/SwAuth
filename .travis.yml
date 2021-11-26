@@ -1,0 +1,6 @@
+language: swift
+osx_image: xcode13.1
+xcode_destination: platform=iOS Simulator,OS=15.0,name=iPhone 12
+xcode_destination: platform=macOS
+xcode_destination: platform=tvOS Simulator,OS=15.0,name=Apple TV 4K
+xcode_destination: platform=watchOS Simulator,OS=8.0,name=Apple Watch Series 7
