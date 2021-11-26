@@ -3,7 +3,7 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/b38ed7450d054e29a0381ad3c11df264)](https://app.codacy.com/gh/Colaski/SwAuth?utm_source=github.com&utm_medium=referral&utm_content=Colaski/SwAuth&utm_campaign=Badge_Grade_Settings)
 [![Build](https://github.com/Colaski/SwAuth/actions/workflows/build.yml/badge.svg)](https://github.com/Colaski/SwAuth/actions/workflows/build.yml)
-![SPM](https://img.shields.io/badge/Swift%20Package%20Manager-Compatible-brightgreen)
+![SPM](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen)
 ![Swift](https://img.shields.io/badge/Swift-5.5-orange)
 ![Platforms](https://img.shields.io/badge/Platforms-iOS%2015.0%2B%20%7C%20macOS%2012.0%2B%20%7C%20watchOS%208.0%2B%20%7C%20tvOS%2015.0%2B-blue)
 
@@ -12,12 +12,14 @@ SwAuth is an OAuth 2.0 HTTP request library written in Swift for iOS 15.0+, macO
 - [Features](#features)
 - [Requirements](#requirements)
 - [Installation/Integration](#installationintegration)
+  - [Swift Package](#swift-package)
+  - [App](#app)
 - [Basic Usage](#basic-usage)
 - [Contributing](#contributing)
 
 ## Features
 
-- [x] Usable and beautiful syntax with async/await! Kiss completion handler hell and the closure jungle goodbye!
+- [x] Beautiful readable syntax with async/await! Kiss completion handler hell and the closure jungle goodbye!
 - [x] Supports Authorization Code Grant (RFC 6749/6750), Proof Key for Code Exchange (PKCE) extension for Authorization Code Grant (RFC 7636), and the Device Authorization Grant (RFC 8628).
 - [x] Support for all Apple device platforms.
 - [x] Retry errored requests.
@@ -26,7 +28,7 @@ SwAuth is an OAuth 2.0 HTTP request library written in Swift for iOS 15.0+, macO
 - [x] Easily deal with JSON responses with [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) built-in.
 - [x] Easily integrate with SwiftUI.
 - [x] [Complete, meticulous, thorough, documentation.](https://swauth.netlify.app/documentation/Swauth)
-- [x] Errors that are probably, maybe actually useful.
+- [x] Errors that are probably, maybe, useful.
 - [x] Built on [SwiftNIO](https://github.com/apple/swift-nio) with [AsyncHTTPClient](https://github.com/swift-server/async-http-client).
 - [x] QR Code for the Device Authorization Flow (tvOS/watchOS).
 - [x] Sample/Example Apps.
@@ -110,7 +112,7 @@ do {
     request.httpBody = ["ids": ["5K4W6rqBFWDnAN6FQUkS6x"]]
     request.bodyEncoding = .JSON
 
-    // Send an authenticated HTTP request, this one will follow the artist Kanye on Spotify.
+    // Send an authenticated HTTP request, this one will follow the artist Kanye West on Spotify.
     let json = try await spotify.authenticatedRequest(for: request, numberOfRetries: 2).json()
     
     // Prints the JSON output
@@ -126,14 +128,15 @@ For more information, read my beautiful documentation: [https://swauth.netlify.a
 
 Contributions are welcome!
 
-Make sure swift is installed and then
+You do not need a mac to contribute, all you need is Swift and [SwiftLint](https://github.com/realm/SwiftLint) (there is a SwiftLint VSCode extension). No linting rules are added or excluded, the default will do.
+
+Clone the repo:
 ```bash
 git clone https://github.com/Colaski/SwAuth.git
 cd SwAuth
-swift build
 ```
 
-Make your changes and submit a PR for review!
+Make your changes, fix linting errors, see if it works, and submit a PR for review!
 
 Nice to have list:
 
@@ -141,3 +144,5 @@ Nice to have list:
     - Perhaps Spotify, Google, Azure/Microsoft, Github etc.
     
 - [ ] OAuth 1.0 support
+
+- [ ] Linux/Windows support
