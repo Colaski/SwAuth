@@ -7,7 +7,7 @@
 ![Swift](https://img.shields.io/badge/Swift-5.5-orange)
 ![Platforms](https://img.shields.io/badge/Platforms-iOS%2015.0%2B%20%7C%20macOS%2012.0%2B%20%7C%20watchOS%208.0%2B%20%7C%20tvOS%2015.0%2B-blue)
 
-SwAuth is an OAuth 2.0 HTTP request library written in Swift iOS 15.0+, macOS 12.0+, watchOS 8.0+, and tvOS 15.0+.
+SwAuth is an OAuth 2.0 HTTP request library written in Swift for iOS 15.0+, macOS 12.0+, watchOS 8.0+, and tvOS 15.0+.
 
 - [Features](#features)
 - [Requirements](#requirements)
@@ -133,7 +133,7 @@ cd SwAuth
 swift build
 ```
 
-Make your changes and submit and a PR for review!
+Make your changes and submit a PR for review!
 
 Nice to have list:
 
