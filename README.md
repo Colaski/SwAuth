@@ -38,6 +38,8 @@ SwAuth is an OAuth 2.0 HTTP request library written in Swift iOS 15.0+, macOS 12
 
 ## Installation/Integration
 
+### Swift Package
+
 Use the Swift Package Manager to add SwAuth to your project! Simply add the package to dependencies in your `Package.swift`: 
 
 ```swift
@@ -48,6 +50,10 @@ let package = Package(
     ]
 )
 ```
+
+### App
+
+Select `File > Add Packages` and enter `https://github.com/Colaski/SwAuth.git`
 
 ## Basic Usage
 
