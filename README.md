@@ -4,8 +4,9 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/b38ed7450d054e29a0381ad3c11df264)](https://app.codacy.com/gh/Colaski/SwAuth?utm_source=github.com&utm_medium=referral&utm_content=Colaski/SwAuth&utm_campaign=Badge_Grade_Settings)
 [![Build](https://github.com/Colaski/SwAuth/actions/workflows/build.yml/badge.svg)](https://github.com/Colaski/SwAuth/actions/workflows/build.yml)
 ![SPM](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen)
-![Swift](https://img.shields.io/badge/Swift-5.5-orange)
 ![Platforms](https://img.shields.io/badge/Platforms-iOS%2015.0%2B%20%7C%20macOS%2012.0%2B%20%7C%20watchOS%208.0%2B%20%7C%20tvOS%2015.0%2B-blue)
+![Swift](https://img.shields.io/badge/Swift-5.5-orange)
+![Language](https://img.shields.io/github/languages/top/colaski/swauth?color=orange)
 
 SwAuth is an OAuth 2.0 HTTP request library written in Swift for iOS 15.0+, macOS 12.0+, watchOS 8.0+, and tvOS 15.0+.
 
@@ -142,9 +143,8 @@ Make your changes, document them, fix linting errors, see if it works, and submi
 
 Nice to have list:
 
+- [ ] Cocoapods and carthrage integration
 - [ ] Include ready to go implementations of Web API's with endpoints like in the [example app](https://github.com/Colaski/SwAuth/blob/main/SwAuthTestApp/SwAuthTestApp/Spotify.swift)
   - Perhaps Spotify, Google, Azure/Microsoft, Github etc.
-
 - [ ] OAuth 1.0 support
-
 - [ ] Linux/Windows support
