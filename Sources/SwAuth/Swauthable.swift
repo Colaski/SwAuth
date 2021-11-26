@@ -101,7 +101,7 @@ extension Swauthable {
     public var isAuthorized: Bool {
         return keychain[data: "\(clientID):tokens"] != nil ? true : false
     }
-    
+
     // MARK: - Methods
     /**
      Sends a HTTP request to the token endpoint and saves the tokens from the response to keychain.

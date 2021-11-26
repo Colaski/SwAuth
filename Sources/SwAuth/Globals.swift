@@ -27,7 +27,7 @@ import AsyncHTTPClient
 import NIO
 
 internal typealias Request = HTTPClient.Request
-fileprivate let httpClient = HTTPClient(
+private let httpClient = HTTPClient(
     eventLoopGroupProvider: .createNew,
     configuration: HTTPClient.Configuration(timeout: .init(connect: .seconds(5)))
 )
@@ -53,7 +53,11 @@ internal func http(request: HTTPRequest) async throws -> HTTPRequest.Response {
                 if response.status == .ok {
                     continuation.resume(returning: HTTPRequest.Response(data: data))
                 } else {
-                    continuation.resume(throwing: SwAuthError.httpError(json: data.jsonString ?? "\(response.status)" as NSString))
+                    continuation.resume(
+                        throwing: SwAuthError.httpError(
+                            json: data.jsonString ?? "\(response.status)" as NSString
+                        )
+                    )
                 }
             }
         }

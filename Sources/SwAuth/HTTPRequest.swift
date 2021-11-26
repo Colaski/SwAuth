@@ -57,12 +57,12 @@ public struct HTTPRequest {
 
     /// Any additional HTTP header values besides "Authentication" and "Content-Type".
     public var additionalHTTPHeaders: [String: String]?
-    
+
     /// Set the amount of time allowed for the request to complete before it times out.
     ///
-    /// By default, all requests are set to automatically timeout after 5 seconds of attempting to connect. Setting this property
-    /// will void that default behavior. If the request has not been completed after the amount of time set by this property, it
-    /// will terminate.
+    /// By default, all requests are set to automatically timeout after 5 seconds of attempting to connect. Setting
+    /// this property will void that default behavior. If the request has not been completed after the amount of time
+    /// set by this property, it will terminate.
     ///
     /// Supports nanoseconds, microseconds, milliseconds, seconds, minutes, hours.
     ///
@@ -80,7 +80,7 @@ public struct HTTPRequest {
             return try bodyEncoding.encode(dict: httpBody!)
         }
     }
-    
+
     // MARK: - Struct
     /// The response from a ``Swauthable/authenticatedRequest(for:numberOfRetries:)``.
     public struct Response {

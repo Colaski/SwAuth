@@ -30,9 +30,9 @@ struct ProviderView: View {
     var body: some View {
         Group{
             if provider.isAuthed {
-                authorizedView(provider: provider, alert: $alert)
+                AuthorizedView(provider: provider, alert: $alert)
             } else {
-                authorizationView(provider: provider, alert: $alert)
+                AuthorizationView(provider: provider, alert: $alert)
             }
         }
         .navigationBarTitle(provider.label, displayMode: .inline)
@@ -45,7 +45,7 @@ struct ProviderView: View {
 }
 
 /// A view containing a button that sends an authorized request and displays a stored request, if one exists.
-struct authorizedView: View {
+struct AuthorizedView: View {
     @ObservedObject var provider: Provider
     @Binding var alert: (isShowing: Bool, alertMessage: String)
     
@@ -92,7 +92,7 @@ struct authorizedView: View {
 }
 
 /// A view containg a button that starts an ASWebAuthenticationSession.
-struct authorizationView: View {
+struct AuthorizationView: View {
     @ObservedObject var provider: Provider
     @Binding var alert: (isShowing: Bool, alertMessage: String)
     @State private var startingWebAuthenticationSession = false
@@ -133,7 +133,7 @@ struct authorizationView: View {
                          */
                         try await provider.authorizationResponseHandler(url: callbackURI!)
                         // This provider is now authorized, an
-                        // authorizedView will be presented instead.
+                        // AuthorizedView will be presented instead.
                         self.provider.isAuthed = true
                     } catch {
                         /*

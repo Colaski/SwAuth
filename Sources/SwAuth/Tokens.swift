@@ -94,9 +94,9 @@ struct Tokens: Codable {
     }
 
     private init(accessToken: String,
-         tokenType: String,
-         refreshToken: String,
-         tokenExpiration: Int) {
+                 tokenType: String,
+                 refreshToken: String,
+                 tokenExpiration: Int) {
         self.accessToken = accessToken
         self.tokenType = tokenType
         self.refreshToken = refreshToken

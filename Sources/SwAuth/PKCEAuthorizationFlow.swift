@@ -190,7 +190,7 @@ open class PKCEAuthorizationFlow: Swauthable {
 
         try await tokenRequest(request: request)
     }
-    
+
     // MARK: - Structs
     // Most of the code in this struct is derivative of:
     // https://bootstragram.com/blog/oauth-pkce-swift-secure-code-verifiers-and-code-challenges/
@@ -230,7 +230,6 @@ open class PKCEAuthorizationFlow: Swauthable {
             self.codeChallenge = challenge!
         }
     }
-
 
     // MARK: - Initializers
     /**

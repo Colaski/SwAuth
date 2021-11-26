@@ -1,7 +1,6 @@
 # NOTICES AND INFORMATION
 This software incorporates material from third parties.
 
-
 ## SwiftyJSON.swift
 
 ### SwiftyJSON

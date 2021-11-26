@@ -85,8 +85,8 @@ extension DeviceAuthorizationFlow {
         public let verificationURI: String
         /**
          The server may respond with a complete verification URI in addition to a verification URI (the verification
-         URI combined with the user code). Following the complete verification URI allows the user to not have to type-in
-         the user code. Is nil if one was not provided.
+         URI combined with the user code). Following the complete verification URI allows the user to not have to
+         type-in the user code. Is nil if one was not provided.
          
          - Important: As per RFC 8628, do not display the ``completeVerificationURI`` directly to the
          user because of its increased complexity, instead display a ``qrCode``. See [RFC 8628 Section
@@ -200,7 +200,7 @@ extension DeviceAuthorizationFlow {
             }
             let verifURIComplete = fromJSON["verification_uri_complete"].string
             let interval = fromJSON["interval"].uInt32 ?? 5
-            
+
             self.init(deviceCode: deviceCode,
                       userCode: userCode,
                       verificationURI: verificationURx!,
