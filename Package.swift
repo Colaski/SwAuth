@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "SwAuth",
     products: [
-        .library(name: "SwAuth", targets: ["SwAuth"]),
+        .library(name: "SwAuth", targets: ["SwAuth"])
     ],
     dependencies: [
         .package(url: "https://github.com/kishikawakatsumi/KeychainAccess.git", from: "4.2.2"),
