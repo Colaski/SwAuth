@@ -16,6 +16,7 @@ SwAuth is an OAuth 2.0 HTTP request library written in Swift for iOS 15.0+, macO
   - [App](#app)
 - [Basic Usage](#basic-usage)
 - [Contributing](#contributing)
+- [License](#license)
 
 ## Features
 
@@ -127,23 +128,8 @@ For more information, read my beautiful documentation: [https://swauth.netlify.a
 
 ## Contributing
 
-Contributions are welcome!
+Check out [CONTRIBUTING.md](./CONTRIBUTING.md) for information!
 
-You do not need a mac to contribute, all you need is Swift and [SwiftLint](https://github.com/realm/SwiftLint) (there is a SwiftLint VSCode extension). No linting rules are added or excluded, the default will do.
+## License
 
-Clone the repo:
-
-```bash
-git clone https://github.com/Colaski/SwAuth.git
-cd SwAuth
-```
-
-Make your changes, document them, fix linting errors, see if it works, and submit a PR for review!
-
-Nice to have list:
-
-- [ ] Cocoapods and Carthage integration
-- [ ] Include ready to go implementations of Web API's with endpoints like in the [example app](https://github.com/Colaski/SwAuth/blob/main/SwAuthTestApp/SwAuthTestApp/Spotify.swift)
-  - Perhaps Spotify, Google, Azure/Microsoft, Github etc.
-- [ ] OAuth 1.0 support
-- [ ] Linux/Windows support
+SwAuth its self is licensed under the [MIT License](./LICENSE), however please take notice of the [NOTICE](./NOTICE.md) file in the root of this repository. Also, make sure to check the respective licenses of this library's dependencies before releasing your project.
