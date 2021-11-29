@@ -13,8 +13,7 @@ To have your changes merged make sure:
 * Added code is documented, adhering somewhat to the style of the rest of the project. ([there are tons of examples in the code base](https://github.com/Colaski/SwAuth/blob/main/Sources/SwAuth/AuthorizationCodeFlow.swift))
 * You have tested your changes through a test app or demo app or unit tests.
 
-Besides whatever awesome idea you have here is a nice to have list:
+## Want to Contrubute but Need Ideas?
 
-* [ ] Include site-specific implementations, similar to in the [example app](https://github.com/Colaski/SwAuth/blob/main/SwAuthTestApp/SwAuthTestApp/Spotify.swift)
-  * Perhaps Spotify, Google, Azure/Microsoft, Github, Reddit etc.
-* [ ] Linux/Windows support
+- Check out [projects](https://github.com/Colaski/SwAuth/projects) to see what features/changes are planned but yet to be implemented!
+- Check out [issues](https://github.com/Colaski/SwAuth/issues) to see if there are any that you could solve!
