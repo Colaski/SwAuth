@@ -1,5 +1,5 @@
 <!-- omit in toc -->
-# SwAuth ![License](https://img.shields.io/github/license/colaski/swauth?color=lightgrey&style=flat-square) ![Version](https://img.shields.io/github/v/release/colaski/swauth?style=flat-square)
+# SwAuth [![License](https://img.shields.io/github/license/colaski/swauth?color=lightgrey&style=flat-square)](https://github.com/Colaski/SwAuth#license) ![Version](https://img.shields.io/github/v/tag/colaski/Swauth?label=release)
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/b38ed7450d054e29a0381ad3c11df264)](https://app.codacy.com/gh/Colaski/SwAuth?utm_source=github.com&utm_medium=referral&utm_content=Colaski/SwAuth&utm_campaign=Badge_Grade_Settings)
 [![Build](https://github.com/Colaski/SwAuth/actions/workflows/build.yml/badge.svg)](https://github.com/Colaski/SwAuth/actions/workflows/build.yml)
