@@ -84,6 +84,8 @@ Xcode should take care of the rest!
                             accessGroup: "appIdentifierPrefix.com.your.bundleID").label("Your App Name")
     ```
 
+    SwAuth uses KeychainAccess to make setting up the keychain easy. You can see a full list of options for it here: [https://github.com/kishikawakatsumi/KeychainAccess#key-configuration-accessibility-sharing-icloud-sync](https://github.com/kishikawakatsumi/KeychainAccess#key-configuration-accessibility-sharing-icloud-sync).
+
 3. Create an instance of the proper authorization flow for your Web API.
 
     ```swift
