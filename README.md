@@ -90,12 +90,13 @@ Xcode should take care of the rest!
     let keychain = Keychain(service: "com.your.bundleID",
                             accessGroup: "appIdentifierPrefix.com.your.bundleID").label("Your App Name")
 
-    let spotify = PKCEAuthorizationFlow(clientID: "YourClientID",
+    var spotify = PKCEAuthorizationFlow(clientID: "YourClientID",
                                         authorizationEndpoint: URL(string: "https://accounts.spotify.com/authorize")!,
                                         tokenEndpoint: URL(string: "https://accounts.spotify.com/api/token")!,
                                         redirectURI: "someapp://callback",
                                         keychain: keychain,
                                         scopes: "user-follow-modify")
+    spotify.additionalRefreshTokenBodyParams = ["client_id": clientID]
     ```
 
 4. Start an ASWebAuthenticationSession like in the [example app](https://github.com/Colaski/SwAuth/blob/main/SwAuthTestApp/SwAuthTestApp/ProviderView.swift#L94) with the instance's authorization URL:
