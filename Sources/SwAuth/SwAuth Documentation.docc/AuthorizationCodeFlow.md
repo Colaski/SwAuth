@@ -14,6 +14,7 @@ let spotify = AuthorizationCodeFlow(clientID: "YourClientID",
                                     tokenEndpoint: URL(string: "https://accounts.spotify.com/api/token")!,
                                     redirectURI: "someapp://callback",
                                     keychain: keychain)
+spotify.additionalRefreshTokenBodyParams = ["client_id": clientID]
 ```
 
 I can now get the authorization URL my user will follow like so:
