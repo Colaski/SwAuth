@@ -1,4 +1,4 @@
-# ``Spotify``
+# ``SwAuth/Spotify``
 
 ## Getting Started
 
@@ -22,7 +22,7 @@ let authURL = spotify.authorizationURL
 
 SwiftUI users, I recommend using [BetterSafariView's](https://github.com/stleamist/BetterSafariView) ASWebAuthenticationSession for following the authorization URL.
 
-Assuming the user authorizes your application, pass the callback URL into ``authorizationResponseHandler(for:)`` (but of course take into account proper error handling):
+Assuming the user authorizes your application, pass the callback URL into ``PKCEAuthorizationFlow/authorizationResponseHandler(for:)`` (but of course take into account proper error handling):
 
 ```swift
 try await spotify.authorizationResponseHandler(for: callbackURL)
@@ -47,4 +47,4 @@ print(response.json())
 
 ### Handle the Callback
 
-- ``authorizationResponseHandler(for:)``
+- ``PKCEAuthorizationFlow/authorizationResponseHandler(for:)``
