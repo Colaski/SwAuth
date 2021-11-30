@@ -2,7 +2,7 @@
 
 Thanks for showing interest in contributing!
 
-For fixes and improvements please fork this repository and issue a pull request.
+For fixes and improvements please work from the `develop` branch of repository and issue a pull request to the `develop` branch.
 
 You do not need a mac to contribute, all you need is Swift and [SwiftLint](https://github.com/realm/SwiftLint) (there is a SwiftLint VSCode extension). No linting rules are added or excluded, the default will do.
 
