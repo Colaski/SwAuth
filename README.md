@@ -10,6 +10,7 @@
 SwAuth is an OAuth 2.0 HTTP request library written in Swift for iOS 15.0+, macOS 12.0+, watchOS 8.0+, and tvOS 15.0+.
 
 - [Features](#features)
+  - [Built-in Support](#built-in-support)
 - [Requirements](#requirements)
 - [Installation/Integration](#installationintegration)
   - [Swift Package](#swift-package)
@@ -33,6 +34,11 @@ SwAuth is an OAuth 2.0 HTTP request library written in Swift for iOS 15.0+, macO
 - [x] Built on [SwiftNIO](https://github.com/apple/swift-nio) with [AsyncHTTPClient](https://github.com/swift-server/async-http-client).
 - [x] QR Code for the Device Authorization Flow (tvOS/watchOS).
 - [x] Sample/Example Apps.
+- [x] Built- in support for some popular Web APIs.
+
+### Built-in Support
+
+- Spotify
 
 ## Requirements
 
