@@ -98,7 +98,7 @@ Xcode should take care of the rest!
                                         redirectURI: "someapp://callback",
                                         keychain: keychain,
                                         scopes: "user-follow-modify")
-    spotify.additionalRefreshTokenBodyParams = ["client_id": clientID]
+    spotify.additionalRefreshTokenBodyParams = ["client_id": "YourClientID"] // Spotify specifically requires the client ID to be included in the refresh token's body parameters.
     ```
 
 4. Start an ASWebAuthenticationSession like in the [example app](https://github.com/Colaski/SwAuth/blob/main/SwAuthTestApp/SwAuthTestApp/ProviderView.swift#L94) with the instance's authorization URL:
