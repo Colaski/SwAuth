@@ -2,7 +2,7 @@
 
 Thanks for showing interest in contributing!
 
-For fixes and improvements please work from the [`develop`](https://github.com/Colaski/SwAuth/tree/develop) branch of repository and issue a pull request to the [`develop`](https://github.com/Colaski/SwAuth/tree/develop) branch.
+For fixes and improvements other than those involving markdown files, please work from the [`develop`](https://github.com/Colaski/SwAuth/tree/develop) branch of this repository and issue a pull request to the [`develop`](https://github.com/Colaski/SwAuth/tree/develop) branch.
 
 You do not need a mac to contribute, all you need is Swift and [SwiftLint](https://github.com/realm/SwiftLint) (there is a SwiftLint VSCode extension). No linting rules are added or excluded, the default will do.
 
