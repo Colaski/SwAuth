@@ -55,7 +55,7 @@ let package = Package(
         .library(name: "YourPackageName", targets: ["YourPackageName"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/Colaski/SwAuth.git", from: "1.0.0"),
+        .package(url: "https://github.com/Colaski/SwAuth.git", from: "1.0.1"),
     ],
     targets: [
         .target(name: "YourPackageName", dependencies: ["SwAuth"]),
