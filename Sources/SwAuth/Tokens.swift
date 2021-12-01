@@ -31,16 +31,16 @@ import KeychainAccess
 public struct Tokens: Codable {
     // MARK: - Properties
     /// The access token.
-    let accessToken: String
+    public let accessToken: String
     /// The type of access token, RFC 6750 defines Bearer as a token type. Defaults to "Bearer".
-    let tokenType: String
+    public let tokenType: String
     /// A refresh token provided by the token request. Is "null" when one is not provided.
-    let refreshToken: String
+    public let refreshToken: String
     /// How long the access token is valid before it must be refreshed. Assumes time is in seconds. Defaults to
     /// 3600 (1 hour).
-    let tokenExpiration: Int
+    public let tokenExpiration: Int
     /// True if the refresh token isn't "null".
-    var isRefreshable: Bool {
+    public var isRefreshable: Bool {
         return refreshToken == "null" ? false : true
     }
 
