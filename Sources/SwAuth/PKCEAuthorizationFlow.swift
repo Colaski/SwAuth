@@ -37,7 +37,7 @@ import CryptoKit
  ``init(clientID:authorizationEndpoint:tokenEndpoint:redirectURI:keychain:scopes:)``
  for initialization examples.
  */
-@available(iOS 15.0, macOS 12.0, watchOS 8.0, tvOS 15.0, *)
+@available(iOS 13.0, macOS 10.15, watchOS 6.0, tvOS 13.0, *)
 open class PKCEAuthorizationFlow: Swauthable {
     // MARK: - Properties
     /// An instance of PKCE

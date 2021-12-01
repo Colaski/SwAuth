@@ -31,7 +31,7 @@ import AsyncHTTPClient
 ///  ``DeviceAuthorizationFlow``) conform to this protocol.
 ///
 /// Swauthable provides some default implementations.
-@available(iOS 15.0, macOS 12.0, watchOS 8.0, tvOS 15.0, *)
+@available(iOS 13.0, macOS 10.15, watchOS 6.0, tvOS 13.0, *)
 public protocol Swauthable {
     // MARK: - Properties
     /// The client identifier issued by the server. Is initialized.
@@ -90,7 +90,7 @@ public protocol Swauthable {
 
 // MARK: - Default Implementations
 // These are default implementations for every instance that conforms to Swauthable.
-@available(iOS 15.0, macOS 12.0, watchOS 8.0, tvOS 15.0, *)
+@available(iOS 13.0, macOS 10.15, watchOS 6.0, tvOS 13.0, *)
 extension Swauthable {
     // MARK: - Property
     /// True if the keychain instance contains tokens from a token request. If your application has been authorized by
