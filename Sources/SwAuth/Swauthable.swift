@@ -134,10 +134,12 @@ extension Swauthable {
             }
         } while loop.0 == false
     }
-    /// **Ignore if the Web API does not provide a refresh token.**
-    /// Called by the instance's ``authenticatedRequest(for:)`` method. Checks if the instance has a
-    /// refresh token. If it does, and the access token is expired, calls the `refreshToken` method.
-    func checkRefreshToken(tokens: inout Tokens) async throws {
+    /// **Used Internally**, refresh tokens are handled internally by the library.
+    ///
+    /// Called by the instance's ``authenticatedRequest(for:numberOfRetries:)`` method.
+    /// Checks if the instance has a refresh token. If it does, and the access token is expired, calls the
+    /// `refreshToken` method.
+    public func checkRefreshToken(tokens: inout Tokens) async throws {
         if tokens.isRefreshable {
             if let accessTokenCreationDate = keychain[attributes: "\(clientID):tokens"]?.creationDate {
                 if NSDate().timeIntervalSince(accessTokenCreationDate) >= Double(tokens.tokenExpiration - 30) {

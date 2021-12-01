@@ -28,7 +28,7 @@ import KeychainAccess
 /// The tokens from a token request.
 ///
 /// Conforms to `Codable`.
-struct Tokens: Codable {
+public struct Tokens: Codable {
     // MARK: - Properties
     /// The access token.
     let accessToken: String
@@ -46,7 +46,7 @@ struct Tokens: Codable {
 
     // MARK: - Methods
     /// Encodes an instance of Tokens. Returns JSON data.
-    func encode() throws -> Data {
+    public func encode() throws -> Data {
         lazy var encoder = JSONEncoder()
         do {
             return try encoder.encode(self)
@@ -63,15 +63,16 @@ struct Tokens: Codable {
         - for: A client id or other unique string.
         - in: An instance of keychain.
      */
-    func saveTokens(for clientID: String, in keychain: Keychain) throws {
+    public func saveTokens(for clientID: String, in keychain: Keychain) throws {
         keychain[data: "\(clientID):tokens"] = try self.encode()
     }
 
     // MARK: - Inits
     /// Decodes data into an instance of Tokens.
     ///
-    /// - Parameter from : An instance of Tokens that was encoded into JSON data by its encode method.
-    init(fromData: Data) throws {
+    /// - Parameter fromData: An instance of Tokens that was encoded into JSON data by its
+    /// ``encode()`` method.
+    public init(fromData: Data) throws {
         let decoder = JSONDecoder()
         do {
             self = try decoder.decode(Tokens.self, from: fromData)
@@ -80,13 +81,14 @@ struct Tokens: Codable {
         }
     }
     /**
-     Fetches an instance of Tokens that was previously saved to a keychain instance by the `saveTokens` method.
+     Fetches an instance of Tokens that was previously saved to a keychain instance by the
+     ``saveTokens(for:in:)`` method.
      
      - Parameters:
         - for: A client id or other unique string. MUST be the same one used to save the tokens.
         - from: An instance of keychain. MUST be the same one used to save the tokens.
      */
-    init(for clientID: String, from keychain: Keychain) throws {
+    public init(for clientID: String, from keychain: Keychain) throws {
         guard let tokenData = keychain[data: "\(clientID):tokens"] else {
             throw SwAuthError.authorizationFailure(reason: .noAccessToken)
         }
@@ -105,7 +107,7 @@ struct Tokens: Codable {
     /// Converts JSON from a token request into a Tokens instance.
     ///
     /// - Parameter fromJSON: A  SwiftyJSON instance of the response from a token request.
-    init(fromJSON: JSON) throws {
+    internal init(fromJSON: JSON) throws {
         guard let accessToken = fromJSON["access_token"].string else {
             throw SwAuthError.authorizationFailure(reason: .accessTokenInvalid)
         }
