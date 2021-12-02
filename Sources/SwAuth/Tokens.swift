@@ -40,8 +40,8 @@ struct Tokens: Codable {
     /// 3600 (1 hour).
     let tokenExpiration: Int
     /// True if the refresh token isn't "null".
-    var isRefreshable: Bool {
-        return refreshToken == "null" ? false : true
+    public var isRefreshable: Bool {
+        refreshToken != "null"
     }
 
     // MARK: - Methods
