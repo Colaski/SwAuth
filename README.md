@@ -1,5 +1,5 @@
 <!-- omit in toc -->
-# SwAuth ![License](https://img.shields.io/github/license/colaski/swauth?color=lightgrey&style=flat-square) ![Version](https://img.shields.io/github/v/release/colaski/swauth?style=flat-square)
+# SwAuth [![License](https://img.shields.io/github/license/colaski/swauth?color=lightgrey&style=flat-square)](https://github.com/Colaski/SwAuth#license) ![Version](https://img.shields.io/github/v/tag/colaski/swauth?label=release&style=flat-square)
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/b38ed7450d054e29a0381ad3c11df264)](https://app.codacy.com/gh/Colaski/SwAuth?utm_source=github.com&utm_medium=referral&utm_content=Colaski/SwAuth&utm_campaign=Badge_Grade_Settings)
 [![Build](https://github.com/Colaski/SwAuth/actions/workflows/build.yml/badge.svg)](https://github.com/Colaski/SwAuth/actions/workflows/build.yml)
@@ -61,7 +61,7 @@ let package = Package(
         .library(name: "YourPackageName", targets: ["YourPackageName"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/Colaski/SwAuth.git", from: "1.0.0"),
+        .package(url: "https://github.com/Colaski/SwAuth.git", from: "1.0.1"),
     ],
     targets: [
         .target(name: "YourPackageName", dependencies: ["SwAuth"]),
@@ -90,6 +90,8 @@ Xcode should take care of the rest!
                             accessGroup: "appIdentifierPrefix.com.your.bundleID").label("Your App Name")
     ```
 
+    SwAuth uses KeychainAccess to make setting up the keychain easy. You can see a full list of options for it here: [https://github.com/kishikawakatsumi/KeychainAccess#key-configuration-accessibility-sharing-icloud-sync](https://github.com/kishikawakatsumi/KeychainAccess#key-configuration-accessibility-sharing-icloud-sync).
+
 3. Create an instance of the proper authorization flow for your Web API.
 
     ```swift
@@ -102,7 +104,7 @@ Xcode should take care of the rest!
                                         redirectURI: "someapp://callback",
                                         keychain: keychain,
                                         scopes: "user-follow-modify")
-    spotify.additionalRefreshTokenBodyParams = ["client_id": clientID]
+    spotify.additionalRefreshTokenBodyParams = ["client_id": "YourClientID"] // Spotify specifically requires the client ID to be included in the refresh token's body parameters.
     ```
 
 4. Start an ASWebAuthenticationSession like in the [example app](https://github.com/Colaski/SwAuth/blob/main/SwAuthTestApp/SwAuthTestApp/ProviderView.swift#L94) with the instance's authorization URL:

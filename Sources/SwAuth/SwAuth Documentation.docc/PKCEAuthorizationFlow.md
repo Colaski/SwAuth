@@ -13,7 +13,7 @@ var spotify = PKCEAuthorizationFlow(clientID: "YourClientID",
                                     tokenEndpoint: URL(string: "https://accounts.spotify.com/api/token")!,
                                     redirectURI: "someapp://callback",
                                     keychain: keychain)
-spotify.additionalRefreshTokenBodyParams = ["client_id": clientID]
+spotify.additionalRefreshTokenBodyParams = ["client_id": "YourClientID"] // Spotify specifically requires the client ID to be included in the refresh token's body parameters.
 ```
 
 I can now get the authorization URL my user will follow like so:

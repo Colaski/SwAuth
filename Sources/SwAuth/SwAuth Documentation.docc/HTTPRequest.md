@@ -27,4 +27,3 @@ httpRequestInstance.endpointQueryItems = ["key": "value"]
 ### Initialized
 
 - ``endpoint``
-

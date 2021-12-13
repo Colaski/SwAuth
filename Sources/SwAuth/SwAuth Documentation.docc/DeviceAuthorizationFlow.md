@@ -13,6 +13,7 @@ let googleTV = DeviceAuthorizationFlow(clientID: "YourClientID",
                                        tokenEndpoint: URL(string: "https://oauth2.googleapis.com/device/code")!,
                                        keychain: keychain
                                        scopes: "email provider")
+// Google's device flow specifically requires additional parameters:
 googleTV.additionalTokenRequestParams = ["client_secret": "YourClientSecret"]
 googleTV.additionalRefreshTokenBodyParams = ["client_id": "YourClientID", "client_secret": "YourClientSecret"]
 ```
