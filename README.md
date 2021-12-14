@@ -38,7 +38,7 @@ SwAuth is an OAuth 2.0 HTTP request library written in Swift for iOS 13.0+, macO
 
 ### Built-in Support
 
-SwAuth has build in support for some Web API's:
+SwAuth has build in support for some Web API's with more to come:
 
 - Spotify
 
