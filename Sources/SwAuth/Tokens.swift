@@ -41,7 +41,7 @@ public struct Tokens: Codable {
     public let tokenExpiration: Int
     /// True if the refresh token isn't "null".
     public var isRefreshable: Bool {
-        return refreshToken == "null" ? false : true
+        refreshToken != "null"
     }
 
     // MARK: - Methods

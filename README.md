@@ -4,12 +4,13 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/b38ed7450d054e29a0381ad3c11df264)](https://app.codacy.com/gh/Colaski/SwAuth?utm_source=github.com&utm_medium=referral&utm_content=Colaski/SwAuth&utm_campaign=Badge_Grade_Settings)
 [![Build](https://github.com/Colaski/SwAuth/actions/workflows/build.yml/badge.svg)](https://github.com/Colaski/SwAuth/actions/workflows/build.yml)
 ![SPM](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-success?style=flat-square)
-![Platforms](https://img.shields.io/badge/Platforms-iOS%2015%2B%20%7C%20macOS%2012%2B%20%7C%20watchOS%208%2B%20%7C%20tvOS%2015%2B-blue?style=flat-square)
+![Platforms](https://img.shields.io/badge/Platforms-iOS%2013%2B%20%7C%20macOS%2010.15%2B%20%7C%20watchOS%206%2B%20%7C%20tvOS%2013%2B-blue?style=flat-square)
 ![Swift](https://img.shields.io/badge/Swift-5.5-orange?style=flat-square)
 
-SwAuth is an OAuth 2.0 HTTP request library written in Swift for iOS 15.0+, macOS 12.0+, watchOS 8.0+, and tvOS 15.0+.
+SwAuth is an OAuth 2.0 HTTP request library written in Swift for iOS 13.0+, macOS 10.15+, watchOS 6.0+, and tvOS 13.0+.
 
 - [Features](#features)
+  - [Built-in Support](#built-in-support)
 - [Requirements](#requirements)
 - [Installation/Integration](#installationintegration)
   - [Swift Package](#swift-package)
@@ -33,11 +34,16 @@ SwAuth is an OAuth 2.0 HTTP request library written in Swift for iOS 15.0+, macO
 - [x] Built on [SwiftNIO](https://github.com/apple/swift-nio) with [AsyncHTTPClient](https://github.com/swift-server/async-http-client).
 - [x] QR Code for the Device Authorization Flow (tvOS/watchOS).
 - [x] Sample/Example Apps.
+- [x] Built- in support for some popular Web APIs.
+
+### Built-in Support
+
+- Spotify
 
 ## Requirements
 
-- Xcode 13+
-- iOS 15.0+ | macOS 12.0+ | watchOS 8.0+ | tvOS 15.0+
+- Xcode 13.2+
+- iOS 13.0+ | macOS 10.15+ | watchOS 6.0+ | tvOS 13.0+
 
 ## Installation/Integration
 

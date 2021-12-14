@@ -40,7 +40,7 @@ import enum NIOHTTP1.HTTPMethod
  and/or ``init(clientID:clientSecret:authorizationEndpoint:tokenEndpoint:redirectURI:keychain:scopes:)``
  for initialization examples.
  */
-@available(iOS 15.0, macOS 12.0, watchOS 8.0, tvOS 15.0, *)
+@available(iOS 13.0, macOS 10.15, watchOS 6.0, tvOS 13.0, *)
 open class AuthorizationCodeFlow: Swauthable {
     // MARK: - Properties
     /// The client identifier issued by the server. Is initialized.

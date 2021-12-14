@@ -19,6 +19,10 @@ SwAuth provides an easy way to send OAuth 2.0 HTTP requests for Swift applicatio
 - ``PKCEAuthorizationFlow``
 - ``DeviceAuthorizationFlow``
 
+### Built-in Support
+
+- ``Spotify``
+
 ### Request and Response
 
 Use ``HTTPRequest`` to build a request, send the request with ``Swauthable/authenticatedRequest(for:numberOfRetries:)``, and get a ``HTTPRequest/Response``.

@@ -35,7 +35,7 @@ private let httpClient = HTTPClient(
 /// Sends a HTTP request. Returns a ``HTTPRequest/Response`` instance.
 ///
 /// - Parameter request: A ``HTTPRequest`` instance.
-@available(iOS 15.0, macOS 12.0, watchOS 8.0, tvOS 15.0, *)
+@available(iOS 13.0, macOS 10.15, watchOS 6.0, tvOS 13.0, *)
 internal func http(request: HTTPRequest) async throws -> HTTPRequest.Response {
     let httpRequest = try Request(from: request)
     var deadline: NIODeadline? {
