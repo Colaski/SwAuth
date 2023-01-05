@@ -1,3 +1,5 @@
+**This repository is now archived as my time has become limited and my interest in Apple development has waned.**
+
 <!-- omit in toc -->
 # SwAuth [![License](https://img.shields.io/github/license/colaski/swauth?color=lightgrey&style=flat-square)](https://github.com/Colaski/SwAuth#license) ![Version](https://img.shields.io/github/v/tag/colaski/swauth?label=release&style=flat-square)
 
